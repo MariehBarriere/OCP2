@@ -3,3 +3,7 @@
 body{
     font-family: 'Raleway';
 }
+header
+{
+    border: solid 1px red;
+}
