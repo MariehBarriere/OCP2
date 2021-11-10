@@ -1,8 +1,39 @@
-
+/*body*/
 body{
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'sans-serif';
 }
+
+/*header*/
+
 header
 {
     border: solid 1px red;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    #logo
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    #logo img
+    {
+        width: 250px;
+        height: 100px;
+    }
 }
+
+/*navigation*/
+    nav ul{
+        display: flex;
+    }
+
+nav li{
+    margin-right: 15px;
+}
+
+
