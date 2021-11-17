@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="https://kit.fontawesome.com/d22a31c491.js"></script>
     <link rel="stylesheet" href="css/style1.css" />
-    <link rel="stylesheet" href="css/all.awesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <title>Document</title>
-    <style>
-        ul {
-        list-style-type: none;
-        }
-    </style>
+    
 </head>
 
 <body>
     <div id="bloc_page">
+    <!-- Header-->
         <header>
         <div id= "logo">
             <img src="assets/logo/Booki.png" alt="Logo de Booki" />
         </div>
 
         <nav>
-            <ul>
-                <li><a href="#">Hébergements</a></li>
-                <li><a href="#">Activités</a></li>
+            <ul class="menu">
+                <li><a href="#hebergements">Hébergements</a></li>
+                <li><a href="#activites">Activités</a></li>
             </ul>
         </nav>
         </header> 
-     </div>
-    <div id="presentation">
+
+    <!-- Présentation-->
+        <div id="presentation">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-     </div>
+        </div>
+
+
+    <!-- Recherche-->
+        <div class="recherche">
+            
+            <div class="icone-localisation">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+
+            <div><form method="post" action="#">
+                <input type="text" id="localisation" placeholder="Marseille, France">
+                <button type="button-research" id="button-research">Rechercher</button>
+            </div>
     
+        </div>
+    </div>
 </body>
 </html>
 

@@ -1,47 +1,54 @@
-/*body*/
+/*Eléments principaux de la page*/
+
 body{
-    font-family: 'Raleway','sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Evite les calculs: border, margin, padding*/
+    font-family: 'Raleway',sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
 }
 
 #bloc_page 
 {
-    width: 900px;
+    width: 90%;
     margin: auto;
 }
 
-/*header*/
+/*Header*/
 
 header
 {
-    border: solid 1px red;
-    margin: 2px;
-
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-end; /*utilisation propriété flexbox*/
+    padding: 50px 30px 30px 30px;
+}
 
-    #logo
-    {
+    nav ul{
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+    }
+    nav a{
+        text-decoration: none;
+        font-size: 16px;
+        color: #000;
+    }
+    nav li{
+        padding-left: 50px;
+    }
+
+    nav a:hover{
+        text-decoration: overline #0065FC solid;
+        color: #0065FC;
+    }   /*je n'arrive pas à remonter les surlignements*/
+  
+    header #logo{
         display: flex;
         flex-direction: row;
         align-items: baseline;
     }
-
-    #logo img
-    {
-        width: 250px;
-        height: 100px;
+    header #logo img{
+        width: 100px;
     }
-}
-
-/*navigation*/
-    nav ul{
-        display: flex;
-    }
-
-    nav li{
-        margin-right: 15px;
-    }
-
-
-
