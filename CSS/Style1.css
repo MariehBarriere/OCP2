@@ -52,3 +52,13 @@ header
     header #logo img{
         width: 100px;
     }
+
+/*Présentation*/
+
+    #presentation h1{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    #presentation p{
+        font-size: 14px;
+    }
