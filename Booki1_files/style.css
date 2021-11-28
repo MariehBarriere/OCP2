@@ -171,11 +171,11 @@ header{
     }
 /*-------------------------------------Main-------------------------------------*/
 
+    /*---------Section 1: Hebergements a Marseille---------*/
     .hebergements_centre{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     }
-    /*---------Hebergements a Marseille---------*/
     .hebergements_marseille{
     width: 66%;
     border-radius: 15px;
@@ -195,7 +195,6 @@ header{
     padding: 5px;
     background-color: #FFF; 
     border-radius: 15px;
-    box-shadow: 1px 1px 8px #e2e2e2;
     width: 30%;
     height: 250px;
     }
@@ -217,25 +216,28 @@ header{
     color:#e2e2e2;
     }                   /*je n'arrive pas a reduire l'interligne dans les box hotel*/
 
-    /*---------Les plus populaires---------*/
-    .populaires{
+    /*---------Section 2: Les plus populaires---------*/
+    .les-plus_populaires{
+    /*flex: 1.2;*/
     width: 33%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f2f2f2;
-    border-radius: 15px;
     flex-wrap: wrap;
     }
-
-    .titre_populaires{ 
+    
+    .titre_populaires{
+    margin: 5%;
     display: flex;
-    width: 85%;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    padding-left: 30px;
+    margin-top: 20px;
     font-weight: bolder;
+    border-radius: 15px;
+    background-color: #f2f2f2;
     }
+
     .populaire{
     display:flex;
     justify-content: space-around;
