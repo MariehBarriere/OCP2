@@ -218,47 +218,58 @@ header{
     }                   /*je n'arrive pas a reduire l'interligne dans les box hotel*/
 
     /*---------Les plus populaires---------*/
-    .populaires{
-    width: 33%;
+  
+    .les_plus_populaires{ 
+    width: 95%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: #f2f2f2;
     border-radius: 15px;
+    margin-left: 30px;
     flex-wrap: wrap;
     }
-
-    .titre_populaires{ 
-    display: flex;
-    width: 85%;
-    justify-content: space-between;
+   .titre_populaires{
     align-items: center;
-    margin-top: 30px;
-    font-weight: bolder;
-    }
+    justify-content: space-between;
+    display: flex;
+    padding: 20px 30px 15px 0;
+    margin-left: 5%;
+   }
+   .article .populaire{
+    padding: 10px 0 10px 5px;
+    width: 80%
+   }
     .populaire{
     display:flex;
-    justify-content: space-around;
-    /*margin: 30px;*/
-    padding: 5px;
+    justify-content: space-between;
+    padding: 10px 5px 10px 10px;
     background-color: #FFF; 
     border-radius: 15px;
-    width: 70%;
-    height: 100px;
+    width: 80%;
+    height: 150px;
+    margin-left: 30px;
     }
     .populaire img{
-    width: 100%;
+    justify-content: center;
+    width: 40%;
     height: 115px;
     object-fit: cover;
     border-radius: 15px 0 0 15px;
     }
-    .populaire .h3, .populaire p{
-    margin-left: 60px;    
+    .populaire h3{
+    display: flex;
+    margin-left: 150px;   /*obligée de préciser: avait mis par défaut des margin-block*/
+    margin-bottom: 150px; 
+    }
+    .populaire p{
+    display: flex;
+    margin-left: 150px; 
     }
     .populaire .stars{
     color:#0065FC;
     font-size: 70%;
-    margin-left: 100px;
+    display: flex;
+    margin-left: 150px;
     }
     .populaire .stars .empty{
     color:#e2e2e2;
