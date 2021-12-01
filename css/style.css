@@ -1,6 +1,7 @@
 /*----------Eléments principaux de la page----------*/
 
 body{
+width: 100%;
 box-sizing: border-box; /*Evite les calculs: border, margin, padding*/
 font-family: "Raleway",sans-serif;
 margin: auto;
@@ -109,14 +110,14 @@ header{
     align-items: center;
     margin: 10px 0 0px 35px;
     font-weight: bolder;
-    font: #000 18px;
+    font-size: 18px;
     }
 
     .filtres li{
     display: flex; /*si je l'enlève, ça remet les puces!?*/
     display: inline;
     text-decoration: none;
-    font: #000 18px; /*pas efficace*/
+    font-size: 18px;
     align-items: center;
     justify-content: space-between;
     border: #f2f2f2 solid;
@@ -169,7 +170,7 @@ header{
     }
 /*-------------------------------------Main-------------------------------------*/
 
-    .hebergements_centre{
+    #hebergements{
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -177,15 +178,16 @@ header{
     /*---------Hebergements a Marseille---------*/
     .hebergements_marseille{
     width: 70%;
+    height: fit-content; /*ajouté pour contrer parametres imposés*/
     border-radius: 15px;
     background-color: #f2f2f2;
-    padding: 10px;
+    padding: 5px;
     margin-left: 35px;
     flex-wrap: wrap;
     }
     .hebergements_marseille h2, .afficher{
-    margin: 5%;
     font-weight: bolder;
+    padding: 20px 30px 15px 15px;
     }
     .hotels_centre1, .hotels_centre2{
     display:flex;
@@ -207,7 +209,7 @@ header{
     border-radius: 15px 15px 0 0;
     }
     .hotels h3, p{
-    font-size: bolder 16px;
+    font-size: 16px;
     margin-left: 15px;    
     }
     .stars{
@@ -223,13 +225,16 @@ header{
     margin-left: 25px;
     }
     /*---------Les plus populaires---------*/
+    aside{
+    width: 30%;
+    margin: 0 25px 50px 25px;
+    }    
   
     .les_plus_populaires{ 
     flex-direction: column;
     background-color: #f2f2f2;
     border-radius: 15px;
     padding: 10px;
-    margin-right: 35px;
     flex-wrap: wrap;
     }
     
@@ -244,53 +249,76 @@ header{
    }
    .article .populaire{
     padding: 10px 0 10px 10px;
-    width: 80%
+    width: 100%
    }
     .populaire{
     display:flex;
     justify-content: space-between;
-    padding: 5px 15px 10px 10px;
+    padding: 5px;
     background-color: #FFF; 
     border-radius: 15px;
     box-shadow: 1px 1px 8px #e2e2e2;
     width: 80%;
-    height: 150px;
-    margin-left: 40px;
-    margin-bottom: 40px;;
+    height: 145px;
+    margin-left: 20px;
+    margin-bottom: 40px;
     }
-    .populaire img{
-    justify-content: center;
-    width: 35%;
-    height: 155px;
-    object-fit: cover;
+    .pop_link{
+    width: 100%;
+    display: flex;
+    }
+    .pop_img1{
+    width: 40%;
+    height: 145px;
+    background-image: url("../assets/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+    background-size: cover;
+    background-position: 50%;
     border-radius: 15px 0 0 15px;
     }
-    .populaire h3{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: bolder 16px;
-    margin: -140px 40px 150px 170px;
-    } 
-    .populaire p{
-    display: flex;
-    flex-wrap: wrap;
-    margin: -140px 40px 150px 170px;
+    .pop_img2{
+    width: 40%;
+    height: 145px;
+    background-image: url("../assets/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 15px 0 0 15px;
     }
+    .pop_img3{
+    width: 40%;
+    height: 145px;
+    background-image: url("../assets/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 15px 0 0 15px;
+    }
+    .pop_text{
+    width: 60%;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    }
+    .pop_text h3{
+    margin: 10px 0 0 15px;
+    }
+    .pop_text p{
+    margin-top: 5px;
+    }
+  
     .populaire .stars{
     color:#0065FC;
     font-size: 70%;
     display: flex;
-    margin: -120px 40px 150px 170px;
+    margin-top: auto;
+    margin-bottom: 10px;
     }
     .populaire .stars .empty{
     color:#e2e2e2;
     }
 
 /*----------------dernière section-------------*/
-    #activites_marseille{
-    margin: 50px 35px 50px 35px;
-    }
+   #activites_marseille{
     
+   }
     .activites article{
     background-color: #FFF; 
     border-radius: 15px;
@@ -353,7 +381,7 @@ header{
     }
     .parc_longchamp img{
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     }
@@ -373,7 +401,7 @@ background-color: #f2f2f2;
     .liste-liens{
     width: 33%;
     } 
-    h3{
+    footer h3{
     font: bold 16px;
     margin-left: 40px;
     margin-top: 35px;
@@ -382,8 +410,12 @@ background-color: #f2f2f2;
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    padding: none;    
+    padding: 0;    
     }
     footer li{
-    padding: 0 0 15px 0;
+    padding: 0 0 15px 40px;
     }
+
+
+ /*------------------media querries-----------------*/
+
