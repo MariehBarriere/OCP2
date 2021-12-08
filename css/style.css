@@ -93,6 +93,9 @@ header{
     padding-left: 15px;
     padding-right: 15px;
     }
+    #icon-glass{
+    display: none;
+    } 
 
     .icone-localisation{
     padding: 13px; 
@@ -177,23 +180,30 @@ header{
     }
     /*---------Hebergements a Marseille---------*/
     .hebergements_marseille{
-    width: 70%;
+    width: 65%;
     height: fit-content; /*ajouté pour contrer parametres imposés*/
     border-radius: 15px;
     background-color: #f2f2f2;
     padding: 5px;
-    margin-left: 35px;
+    margin: 0 15px 0 30px;
     flex-wrap: wrap;
     }
-    .hebergements_marseille h2, .afficher{
+    .hebergements_marseille h2{
     font-weight: bolder;
-    padding: 20px 30px 15px 15px;
+    padding: 20px 0 15px 40px;
+    margin: 20px 0 5px 0; /*obligée de spécifier "0" sinin attribue par défaut une margin-bottom de 19.92em*/
     }
-    .hotels_centre1, .hotels_centre2{
+    .hotels_centre1{
     display:flex;
     justify-content: space-around;
-    margin: 30px;
+    margin: 0 20px 0 20px;
     }
+    .hotels_centre2{
+    display:flex;
+   justify-content: space-around;
+    margin: 0 20px 0 20px;
+    }
+
     .hotels{
     padding: 5px;
     background-color: #FFF; 
@@ -201,6 +211,16 @@ header{
     box-shadow: 1px 1px 8px #e2e2e2;
     width: 30%;
     height: 2.5%; 
+    margin: 15px;
+    }
+    .hotels h3{
+    margin: 10px 0 0 15px;
+    font-size:medium;
+    font-weight: bolder;
+    }
+    .hotels p{
+    margin: 5px 0 10px 15px;
+    font-size: small;
     }
     .hotels img{
     width: 100%;
@@ -208,10 +228,7 @@ header{
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     }
-    .hotels h3, p{
-    font-size: 16px;
-    margin-left: 15px;    
-    }
+
     .stars{
     color:#0065FC;
     font-size: 70%;
@@ -219,22 +236,24 @@ header{
     }
     .stars .empty{
     color:#e2e2e2;
-    }                   /*je n'arrive pas a reduire l'interligne dans les box hotel*/
+    }     
+    
     .afficher{
-    font-size: 18px;
-    margin-left: 25px;
+    padding: 0 30px 20px 40px;
+    font-size: 16px;
+    font-weight: bold;
     }
     /*---------Les plus populaires---------*/
     aside{
     width: 30%;
-    margin: 0 25px 50px 25px;
+    margin: 0 20px 0px 15px;
     }    
   
     .les_plus_populaires{ 
     flex-direction: column;
     background-color: #f2f2f2;
     border-radius: 15px;
-    padding: 10px;
+    padding: 0 0 1px 0;
     flex-wrap: wrap;
     }
     
@@ -242,12 +261,15 @@ header{
     align-items: center;
     justify-content: space-between;
     display: flex;
-    padding: 20px 30px 15px 15px;
+    padding: 20px 30px 15px 20px;
+   }
+   .titre_populaires h2{
+    margin: 30px 0 15px 15px; /*obligée de spécifier "0" sinon attribue par défaut une margin-bottom de 19.92em*/
    }
    .titre_populaires i{
     font-size:large;
    }
-   .article .populaire{
+   .article{
     padding: 10px 0 10px 10px;
     width: 100%
    }
@@ -259,9 +281,8 @@ header{
     border-radius: 15px;
     box-shadow: 1px 1px 8px #e2e2e2;
     width: 80%;
-    height: 145px;
-    margin-left: 20px;
-    margin-bottom: 40px;
+    height: 135px;
+    margin: 0 20px 30px 30px;
     }
     .pop_link{
     width: 100%;
@@ -269,7 +290,7 @@ header{
     }
     .pop_img1{
     width: 40%;
-    height: 145px;
+    height: 135px;
     background-image: url("../assets/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
     background-size: cover;
     background-position: 50%;
@@ -277,7 +298,7 @@ header{
     }
     .pop_img2{
     width: 40%;
-    height: 145px;
+    height: 135px;
     background-image: url("../assets/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
     background-size: cover;
     background-position: 50%;
@@ -285,7 +306,7 @@ header{
     }
     .pop_img3{
     width: 40%;
-    height: 145px;
+    height: 135px;
     background-image: url("../assets/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
     background-size: cover;
     background-position: 50%;
@@ -296,12 +317,16 @@ header{
     height: 145px;
     display: flex;
     flex-direction: column;
+    margin-right: 15px;
     }
     .pop_text h3{
-    margin: 10px 0 0 15px;
+    margin: 10px 20px 0 15px;
+    font-size: medium;
+    font-weight: bolder;
     }
     .pop_text p{
-    margin-top: 5px;
+    margin: 5px 0 0 15px;
+    font-size: small;
     }
   
     .populaire .stars{
@@ -309,85 +334,97 @@ header{
     font-size: 70%;
     display: flex;
     margin-top: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     }
     .populaire .stars .empty{
     color:#e2e2e2;
     }
 
 /*----------------dernière section-------------*/
-   #activites_marseille{
-    
+    #activites_marseille{
+    padding: 5px;
+    margin: 15px 20px 30px 10px;
+    width: 100%;
    }
+   #activites_marseille h2{
+    margin: 20px 0 20px 20px;
+   }
+   .activites{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 99%;
+    }
+
     .activites article{
     background-color: #FFF; 
     border-radius: 15px;
     box-shadow: 1px 1px 8px #e2e2e2;
+    margin-bottom: 30px;
     }
-    .activites{
+  
+    .single{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 23%;
+    border-radius: 15px 15px 0 0;
+    margin: 0 1% 0 1%;
     }
-
-    .vieux_port img{
-    width: 320px;
-    height: 435px;
+    .one_card1 img{
+    width: 100%;
+    height: 490px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     }
-
-    .images_horz1{
+    .double .article{
+    margin-bottom: 30px;
+    }
+    .double{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0px 20px 0px 20px;
-    width: 25%;
+    width: 23%;    
     border-radius: 15px 15px 0 0;
+    margin: 0 1% 0 1%;
     }
-    .pomegues img{
+    .two_cards1 img{
     width: 100%;
-    height: 200px;
+    height: 240px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     }
-    .frioul img{
+    .two_cards2 img{
     width: 100%;
-    height: 150px;
+    height: 165px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     }
-
-    .calanques img{
-    width: 320px;
-    height: 435px;
+    .one_card2 img{
+    width: 100%;
+    height: 490px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     }   
 
-    .images_horz2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 0 20px 20px;
-    width: 25%;
-    height: 200px;
-    
-    }
-    .ntd_la_garde img{
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-    }
-    .parc_longchamp img{
+    .two_cards3 img{
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     }
+    .two_cards4 img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    }
+
     .activites h3{
-    margin-left: 10px
+    margin-left: 10px;
+    font-size: medium;
+    font-weight: bolder;
     }
+
 
  /*------------------------------------Footer-----------------------------------*/
 
@@ -398,24 +435,56 @@ flex-wrap: wrap;
 background-color: #f2f2f2;
 }
 
-    .liste-liens{
-    width: 33%;
-    } 
-    footer h3{
-    font: bold 16px;
-    margin-left: 40px;
-    margin-top: 35px;
-    }
-    footer ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0;    
-    }
-    footer li{
-    padding: 0 0 15px 40px;
-    }
+.link_list{
+width: 33%;
+} 
+footer h3{
+font: bold 16px;
+margin-left: 40px;
+margin-top: 35px;
+}
+footer ul{
+list-style-type: none;
+display: flex;
+flex-direction: column;
+padding: 0;    
+}
+footer li{
+padding: 0 0 15px 40px;
+}
 
 
- /*------------------media querries-----------------*/
+ /*-------------------------media querries----------------------*/
 
+ /*Medium devices (tablet, less than 992px)-- change à 988px  */ 
+
+@media screen and (max-width: 992px) {
+
+}
+
+/*Small devices (mobile, max-width 768px)*/
+@media screen and (max-width: 768px) {
+.nav{
+flex-wrap: wrap;   
+}
+nav a:hover{
+border-top: none;
+}
+nav li a:hover{
+border-bottom: solid 2px #0065FC;
+padding-bottom: 15px;
+border-top: none;
+}
+#button-research{
+display:none;
+}
+#icon-glass{
+display: block;
+}
+.activites{
+flex-direction: row;
+}
+.single, .double{
+width: 96%;
+}
+}
