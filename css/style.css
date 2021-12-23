@@ -639,7 +639,7 @@ footer li {
   }
 
   nav ul {
-    padding: 20px 20px 20px 50px;
+    padding: 20px 10px 20px 10px;
     margin-block-start: 0;
     margin-block-end: 0;
     text-align: center;
@@ -695,6 +695,7 @@ footer li {
     padding-left: 20px;
   }
   .recherche form {
+    width: 90%;
     margin-left: 0;
     padding-left: 0;
   }
